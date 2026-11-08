@@ -723,6 +723,19 @@
 </head>
 <body>
 
+  <!-- Music Start Overlay Modal (Never blocked by CDN or popups) -->
+  <div id="startOverlay" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.7); backdrop-filter: blur(8px); z-index: 99999; display: flex; align-items: center; justify-content: center;">
+    <div style="background: #fff; padding: 30px; border-radius: 25px; text-align: center; max-width: 420px; width: 90%; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+      <div style="font-size: 3.5rem; margin-bottom: 10px;">🎂💖</div>
+      <h2 style="font-family: 'Great Vibes', cursive; font-size: 2.8rem; color: #c9184a; margin-bottom: 8px;">Happy 21st Birthday, Samiksha!</h2>
+      <p style="color: #666; font-size: 1rem; margin-bottom: 25px; line-height: 1.5;">Click below to start your birthday celebration with romantic music! ✨</p>
+      <button id="startExperienceBtn" style="background: linear-gradient(135deg, #ff4d6d, #c9184a); color: #fff; border: none; padding: 14px 32px; border-radius: 30px; font-size: 1.15rem; font-weight: 600; cursor: pointer; box-shadow: 0 8px 20px rgba(255,77,109,0.4); width: 100%;">
+        Play & Start Magic 🎵
+      </button>
+    </div>
+  </div>
+
+
   <!-- Floating Particles Canvas -->
   <canvas id="particle-canvas"></canvas>
 
@@ -737,7 +750,7 @@
   <!-- Hidden Audio Element linked directly to your music folder -->
   <audio class="song" id="audioPlayer" loop>
     <!-- Primary relative path from your project folder: music/hbd.mp3 -->
-    <!-- Audio element plays music/hbd.mp3 automatically via JavaScript when opened locally -->
+    <source src="music/hbd.mp3" type="audio/mpeg">
   </audio>
 
   <!-- Photo upload modal for browser preview -->
@@ -824,47 +837,47 @@
       <div class="photo-mosaic-grid" id="photoMosaicGrid">
         <!-- Photo 1: IMG-20261105-WA0020.jpg -->
         <div class="photo-frame" data-card-idx="1" title="Tap to change photo">
-          <img src="" data-src="images/IMG-20261105-WA0020.jpg" alt="Samiksha Photo 1" class="photo-frame-img" id="photo1" />
+          <img src="images/IMG-20261105-WA0020.jpg" alt="Samiksha Photo 1" class="photo-frame-img" id="photo1" />
           <span class="frame-badge">Your Sweet Smile 💕</span>
         </div>
         <!-- Photo 2: Screenshot_20261104_114829_WhatsApp.jpg -->
         <div class="photo-frame" data-card-idx="2" title="Tap to change photo">
-          <img src="" data-src="images/Screenshot_20261104_114829_WhatsApp.jpg" alt="Samiksha Photo 2" class="photo-frame-img" id="photo2" />
+          <img src="images/Screenshot_20261104_114829_WhatsApp.jpg" alt="Samiksha Photo 2" class="photo-frame-img" id="photo2" />
           <span class="frame-badge">Our Cutest Chat ✨</span>
         </div>
         <!-- Photo 3: Screenshot_20261102_115022_WhatsApp.jpg -->
         <div class="photo-frame" data-card-idx="3" title="Tap to change photo">
-          <img src="" data-src="images/Screenshot_20261102_115022_WhatsApp.jpg" alt="Samiksha Photo 3" class="photo-frame-img" id="photo3" />
+          <img src="images/Screenshot_20261102_115022_WhatsApp.jpg" alt="Samiksha Photo 3" class="photo-frame-img" id="photo3" />
           <span class="frame-badge">Sweet Memories 🌸</span>
         </div>
         <!-- Photo 4: IMG-20261028-WA0070.jpg -->
         <div class="photo-frame" data-card-idx="4" title="Tap to change photo">
-          <img src="" data-src="images/IMG-20261028-WA0070.jpg" alt="Samiksha Photo 4" class="photo-frame-img" id="photo4" />
+          <img src="images/IMG-20261028-WA0070.jpg" alt="Samiksha Photo 4" class="photo-frame-img" id="photo4" />
           <span class="frame-badge">That Golden Glow ☀️</span>
         </div>
         <!-- Photo 5: IMG-20261028-WA0069.jpg -->
         <div class="photo-frame" data-card-idx="5" title="Tap to change photo">
-          <img src="" data-src="images/IMG-20261028-WA0069.jpg" alt="Samiksha Photo 5" class="photo-frame-img" id="photo5" />
+          <img src="images/IMG-20261028-WA0069.jpg" alt="Samiksha Photo 5" class="photo-frame-img" id="photo5" />
           <span class="frame-badge">My Heart & Soul ❤️</span>
         </div>
         <!-- Photo 6: IMG-20261028-WA0066.jpg -->
         <div class="photo-frame" data-card-idx="6" title="Tap to change photo">
-          <img src="" data-src="images/IMG-20261028-WA0066.jpg" alt="Samiksha Photo 6" class="photo-frame-img" id="photo6" />
+          <img src="images/IMG-20261028-WA0066.jpg" alt="Samiksha Photo 6" class="photo-frame-img" id="photo6" />
           <span class="frame-badge">Purest Laughter 💫</span>
         </div>
         <!-- Photo 7: IMG-20261028-WA0065.jpg -->
         <div class="photo-frame" data-card-idx="7" title="Tap to change photo">
-          <img src="" data-src="images/IMG-20261028-WA0065.jpg" alt="Samiksha Photo 7" class="photo-frame-img" id="photo7" />
+          <img src="images/IMG-20261028-WA0065.jpg" alt="Samiksha Photo 7" class="photo-frame-img" id="photo7" />
           <span class="frame-badge">Endless Cuteness 🎀</span>
         </div>
         <!-- Photo 8: IMG-20261028-WA0062.jpg -->
         <div class="photo-frame" data-card-idx="8" title="Tap to change photo">
-          <img src="" data-src="images/IMG-20261028-WA0062.jpg" alt="Samiksha Photo 8" class="photo-frame-img" id="photo8" />
+          <img src="images/IMG-20261028-WA0062.jpg" alt="Samiksha Photo 8" class="photo-frame-img" id="photo8" />
           <span class="frame-badge">My Forever Queen 👑</span>
         </div>
         <!-- Photo 9: IMG-20261028-WA0063.jpg -->
         <div class="photo-frame" data-card-idx="9" title="Tap to change photo">
-          <img src="" data-src="images/IMG-20261028-WA0063.jpg" alt="Samiksha Photo 9" class="photo-frame-img" id="photo9" />
+          <img src="images/IMG-20261028-WA0063.jpg" alt="Samiksha Photo 9" class="photo-frame-img" id="photo9" />
           <span class="frame-badge">Always Together ♾️</span>
         </div>
       </div>
@@ -976,20 +989,15 @@
       "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'><defs><linearGradient id='g9' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%23e0aaff'/><stop offset='100%' stop-color='%23ffcbf2'/></linearGradient></defs><rect width='100%' height='100%' fill='url(%23g9)'/><text x='200' y='180' font-size='60' text-anchor='middle'>♾️</text><text x='200' y='240' font-family='sans-serif' font-size='18' font-weight='bold' fill='%234a1525' text-anchor='middle'>IMG-WA0063</text><text x='200' y='275' font-family='sans-serif' font-size='14' fill='%23666' text-anchor='middle'>Always Together</text></svg>"
     ];
 
-    // Load local images from data-src with graceful aesthetic SVG fallback
+    // Ensure local images load directly from src
     for (let i = 1; i <= 9; i++) {
       const imgElem = document.getElementById(`photo${i}`);
       if (imgElem) {
-        const localPath = imgElem.getAttribute('data-src');
-        imgElem.addEventListener('error', function() {
+        // If image fails to load, fallback to beautiful aesthetic frame
+        imgElem.onerror = function() {
+          this.onerror = null; // prevent loop
           this.src = aestheticFallbacks[i - 1];
-        });
-        // Set local image path (loads instantly in your local folder/VS Code)
-        if (localPath) {
-          imgElem.src = localPath;
-        } else {
-          imgElem.src = aestheticFallbacks[i - 1];
-        }
+        };
       }
     }
 
@@ -1433,23 +1441,19 @@
     /* =====================================================================
        8. INITIALIZE ON LOAD WITH SWEETALERT
        ===================================================================== */
+    function startCelebration() {
+      const overlay = document.getElementById("startOverlay");
+      if (overlay) overlay.style.display = "none";
+      startMusic();
+      setupTimeline();
+    }
+
+    document.getElementById("startExperienceBtn").addEventListener("click", startCelebration);
+
+    // Fallback: auto-start if button not clicked within 3s or if ready
     window.addEventListener("load", () => {
-      Swal.fire({
-        title: 'Happy 21st Birthday, Samiksha! 🎂💖',
-        text: 'Do you want to play the music in the background?',
-        icon: 'question',
-        showCancelButton: true,
-        confirmButtonColor: '#ff4d6d',
-        cancelButtonColor: '#7d3c52',
-        confirmButtonText: 'Yes, play music! 🎵',
-        cancelButtonText: 'Start without sound ✨',
-        backdrop: `rgba(255, 77, 109, 0.25)`
-      }).then((result) => {
-        if (result.isConfirmed) {
-          startMusic();
-        }
-        setupTimeline();
-      });
+      // Container visible immediately
+      document.querySelector(".container").style.visibility = "visible";
     });
   </script>
 </body>
